@@ -1,4 +1,4 @@
-# _{Application Name}_
+#  Ping Pong 
 
 #### _{Brief description of application}, {Date of current version}_
 
@@ -30,7 +30,21 @@ _{Let people know what to do if they run into any issues or have questions, idea
 
 _{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
 ### Specifications
-* 
+	1. It can count up to the provided number.
+		* Example Input : 5
+		* Example Output : 1,2,3,4,5
+	2. It displays "ping" in place of numbers which are divisible by 3.
+		* Example Input : 5
+		* Example Output : 1,2,ping,4,5
+	3. It displays "pong" in place of numbers which are divisible by 5.
+		* Example Input : 5
+		* Example Output : 1,2,ping,4,pong
+	4. It displays "pingpong" in place of numbers which are divisible by 	15. 
+		* Example Input : 16
+		* Example Output : 1,2,ping,4,pong,ping,7,8,ping, 								   pong,11,ping,13,14,pingpong,16
+	5. It doesnot allow input except numbers.
+		* Example Input : "hello"
+		* Example Output : "Invalid Input. Please enter a number!"
 
 ### License
 
