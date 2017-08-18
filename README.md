@@ -13,7 +13,7 @@ Web application that takes a number from a user and returns a range of numbers f
 
 ## Setup/Installation Requirements
 
-* [clone it](https://github.com/bablyseattle/ping-pong)
+* _[clone the repository](https://github.com/bablyseattle/ping-pong)_
 * _Open file "index.html" in your choice of browser_
 * _Enjoy !_
 
@@ -23,7 +23,7 @@ _There are no known bugs at this time_
 
 ## Support and contact details
 
-__
+	For comments,suggestions and feedback contact me on bablyhyd@gmail.com
 
 ## Technologies Used
 	* HTML

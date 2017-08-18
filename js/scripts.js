@@ -38,18 +38,16 @@ var display = function(userInput){
 
 // User Interface Logic
 $(document).ready(function() {
-  $("form.form-inline").submit(function(event) {
-    $(".result").empty();
-    
-    
+  $(".form-inline").submit(function(event) {
+    $(".results").empty();
     var results;
     var numberInput = parseInt($("input#number").val());
     results = display(numberInput);
     
     if (results instanceof Array) {
       
-       results.forEach(function(result) {
-      $(".result").append("<li>" + result + "</li>");
+       results.forEach(function(element) {
+      $(".results").append("<li>" + element + "</li>");
         });
       }
       else {
