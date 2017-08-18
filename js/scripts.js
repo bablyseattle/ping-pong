@@ -1,12 +1,14 @@
 //Business Logic
-var arrayOfNumbers = [];
+var arrayOfNumbers = []; 
+// function to count from 1 to given number
 var countTill = function(number){
     for(var i = 1; i <= number; i++) {
       arrayOfNumbers.push(i);
     }
   return arrayOfNumbers;
 }
-var pingpong = function(array){
+// function to replace number divisible by 3,5,15 from ping,pong,pingpong respectively
+var pingPong = function(array){
   for (var i = 1; i < array.length; i++) {
     if (array[i] % 15 == 0) {
       array[i] = "pingpong";
@@ -20,12 +22,18 @@ var pingpong = function(array){
   }
   return array;
 }
-var display = function(number){
-  var numberArray = countTill(number);
-  return pingpong(numberArray);
+//function to display output
+var display = function(userInput){
+  if(isNaN(userInput)){
+      return "please enter a number";
+    } else if (userInput <= 0) {
+      return "Please enter number greator than or equal to 1";
+    } else {
+      var numberArray = countTill(userInput);
+      var pingPongArray = pingPong(numberArray);
+      return pingPongArray;
+    }
 }
-
-
 
 // User Interface Logic
 $(document).ready(function() {
@@ -34,12 +42,7 @@ $(document).ready(function() {
     var result;
     var numberInput = parseInt($("input#number").val());
     alert(numberInput);
-    if(isNaN(numberInput)){
-      result = "please enter a number";
-    }else {
-      result = display(numberInput);
-    }
-    $("#result").text(result);
-    
+    result = display(numberInput);
+    document.getElementById('result').innerHTML = result.join('<br>');
   });
 });
