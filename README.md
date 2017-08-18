@@ -31,7 +31,7 @@ _{Let people know what to do if they run into any issues or have questions, idea
 _{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
 ### Specifications
 	1. It can count up to the provided number.
-	 * Example Input : 5
+	 	* Example Input : 5
 		* Example Output : 1,2,3,4,5
 	2. It displays "ping" in place of numbers which are divisible by 3.
 		* Example Input : 5

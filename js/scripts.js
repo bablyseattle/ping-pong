@@ -1,12 +1,29 @@
 //Business Logic
-var numArray = [];
+var arrayOfNumbers = [];
 var countTill = function(number){
     for(var i = 1; i <= number; i++) {
-      numArray.push(i);
+      arrayOfNumbers.push(i);
     }
-  return numArray;
+  return arrayOfNumbers;
 }
-
+var pingpong = function(array){
+  for (var i = 1; i < array.length; i++) {
+    if (array[i] % 15 == 0) {
+      array[i] = "pingpong";
+    }
+    else if(array[i] % 5 == 0){
+      array[i] = "pong";
+    }
+    else if(array[i] % 3 == 0){
+      array[i] = "ping";
+    }
+  }
+  return array;
+}
+var display = function(number){
+  var numberArray = countTill(number);
+  return pingpong(numberArray);
+}
 
 
 
@@ -20,7 +37,7 @@ $(document).ready(function() {
     if(isNaN(numberInput)){
       result = "please enter a number";
     }else {
-      result = countTill(numberInput);
+      result = display(numberInput);
     }
     $("#result").text(result);
     
