@@ -39,17 +39,23 @@ var display = function(userInput){
 // User Interface Logic
 $(document).ready(function() {
   $("form.form-inline").submit(function(event) {
-    event.preventDefault();
-    var result;
-    var numberInput = parseInt($("input#number").val());
-    result = display(numberInput);
+    $(".result").empty();
     
-    if (result instanceof Array) {
-       document.getElementById('result').innerHTML = result.join('<br>');
-       }
+    
+    var results;
+    var numberInput = parseInt($("input#number").val());
+    results = display(numberInput);
+    
+    if (results instanceof Array) {
+      
+       results.forEach(function(result) {
+      $(".result").append("<li>" + result + "</li>");
+        });
+      }
       else {
-        $("#errorMsg").text(result);
+        $("#errorMsg").text(results);
         $("#errorMsg").show();
       }
+      event.preventDefault();
     });
 });

@@ -4,3 +4,6 @@
 #errorMsg {
 	display: none;
 }
+li{
+	list-style: none;
+}
