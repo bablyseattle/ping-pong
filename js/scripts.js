@@ -2,7 +2,7 @@
 var arrayOfNumbers = []; 
 // function to count from 1 to given number
 var countTill = function(number){
-    for(var i = 1; i <= number; i++) {
+    for (var i = 1; i <= number; i++) {
       arrayOfNumbers.push(i);
     }
   return arrayOfNumbers;
@@ -10,13 +10,13 @@ var countTill = function(number){
 // function to replace number divisible by 3,5,15 from ping,pong,pingpong respectively
 var pingPong = function(array){
   for (var i = 1; i < array.length; i++) {
-    if (array[i] % 15 == 0) {
+    if ((array[i] % 5 == 0) && (array[i] % 3 == 0)) {
       array[i] = "pingpong";
     }
-    else if(array[i] % 5 == 0){
+    else if (array[i] % 5 == 0){
       array[i] = "pong";
     }
-    else if(array[i] % 3 == 0){
+    else if (array[i] % 3 == 0){
       array[i] = "ping";
     }
   }
@@ -32,6 +32,7 @@ var display = function(userInput){
       var numberArray = countTill(userInput);
       var pingPongArray = pingPong(numberArray);
       return pingPongArray;
+      
     }
 }
 
@@ -41,8 +42,14 @@ $(document).ready(function() {
     event.preventDefault();
     var result;
     var numberInput = parseInt($("input#number").val());
-    alert(numberInput);
     result = display(numberInput);
-    document.getElementById('result').innerHTML = result.join('<br>');
-  });
+    
+    if (result instanceof Array) {
+       document.getElementById('result').innerHTML = result.join('<br>');
+       }
+      else {
+        $("#errorMsg").text(result);
+        $("#errorMsg").show();
+      }
+    });
 });
