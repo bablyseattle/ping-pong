@@ -1,8 +1,9 @@
 //Business Logic
-var arrayOfNumbers = []; 
+ 
 // function to count from 1 to given number
 var countTill = function(number){
-    for (var i = 1; i <= number; i++) {
+  var arrayOfNumbers = [];
+  for (var i = 1; i <= number; i++) {
       arrayOfNumbers.push(i);
     }
   return arrayOfNumbers;
@@ -43,8 +44,6 @@ $(document).ready(function() {
      $(".results p").empty();
     var numberInput = parseInt($("input#number").val());
     var results = display(numberInput);
-    
-    
     if (results instanceof Array) {
         results.forEach(function(element) {
         $(".results").append("<p>" + element + "</p>");

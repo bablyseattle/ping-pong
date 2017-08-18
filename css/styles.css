@@ -16,4 +16,12 @@ h1 {
 .form-inline {
 	margin-top:  30px;
 }
+body {
+	background-color: #d5d9e0;
+}
+.btn {
+	background-color: #656668;
+	font-weight: bold;
+	color: white;
+}
 
