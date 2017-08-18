@@ -1,9 +1,19 @@
-/*#result {
-	display: none;
-}*/
 #errorMsg {
 	display: none;
 }
-li{
+
+li {
 	list-style: none;
 }
+h1 {
+	text-align: center;
+}
+
+.jumbotron {
+	background-color: #edd09e;
+}
+
+.form-inline {
+	margin-top:  30px;
+}
+

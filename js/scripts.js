@@ -39,21 +39,22 @@ var display = function(userInput){
 // User Interface Logic
 $(document).ready(function() {
   $(".form-inline").submit(function(event) {
-    $(".results").empty();
-    var results;
+    event.preventDefault();
+     $(".results p").empty();
     var numberInput = parseInt($("input#number").val());
-    results = display(numberInput);
+    var results = display(numberInput);
+    
     
     if (results instanceof Array) {
-      
-       results.forEach(function(element) {
-      $(".results").append("<li>" + element + "</li>");
-        });
+        results.forEach(function(element) {
+        $(".results").append("<p>" + element + "</p>");
+      });
       }
       else {
         $("#errorMsg").text(results);
         $("#errorMsg").show();
       }
-      event.preventDefault();
+      
     });
+
 });
